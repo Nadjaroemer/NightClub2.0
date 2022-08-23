@@ -1,8 +1,9 @@
-//import headerImageOne from "../assets/bg/header_bg_1.jpg";
+import headerImageOne from "../assets/bg/header_bg_1.jpg";
 //import headerImageTo from "../assets/bg/header_bg_2.jpg";
 
 export default function Hero() {
-  const heroImages = ["header_bg_1.jpg", "header_bg_2.jpg"];
+  {
+    /*const heroImages = ["header_bg_1.jpg", "header_bg_2.jpg"];
 
   function getRandomImage(min, max) {
     min = Math.ceil(min);
@@ -10,13 +11,14 @@ export default function Hero() {
     return Math.floor(Math.random() * (max - min) + min);
   }
   const heroImagePicker = () =>
-    `../assets/bg/${heroImages[getRandomImage(0, 2)]}`;
+`../assets/bg/${heroImages[getRandomImage(0, 2)]}`;*/
+  }
 
   return (
     <section className="relative">
       <img
         className="w-screen h-screen z-0"
-        src={heroImagePicker()}
+        src={headerImageOne}
         alt="Night Club"
       />
       {/* left: 0; right: 0; margin-left: auto; margin-right: auto; */}

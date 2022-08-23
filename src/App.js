@@ -1,8 +1,9 @@
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Hero from "./components/Hero";
+import Headline from "./components/Headline";
 import "./App.css";
 import logo from "../src/assets/Logo.png";
-import line from "../src/assets/bottom_line2.png";
+
 import restaurantImageTo from "../src/assets/content-img/reastaurant_1.jpg";
 import restaurantImageOne from "../src/assets/content-img/thumb1.jpg";
 import restaurantImageThree from "../src/assets/content-img/thumb2.jpg";
@@ -39,22 +40,19 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div className="grid grid-col-1 grid-row-3 align-center justify-center">
-          <h1 className="pt-28 tracking-[0.075em] font-bold uppercase text-center text-4xl">
-            Welcome in Night<span className="text-[#ff2a70]">Club</span>
-          </h1>
-          <img src={line} alt="line" className="pt-8 place-self-center" />
-          <div className="flex pt-24">
-            <img
-              src={restaurantImageOne}
-              alt="drinks at table"
-              className="pr-16"
-            />
-            <img src={restaurantImageTo} alt="bruschetta" className="pr-16" />
-            <img src={restaurantImageThree} alt="bar" />
-          </div>
+        <Headline headline="WELCOME IN THE NIGHTCLUB" />
+        <div className="flex pt-24 justify-center">
+          <img
+            src={restaurantImageOne}
+            alt="drinks at table"
+            className="pr-16"
+          />
+          <img src={restaurantImageTo} alt="bruschetta" className="pr-16" />
+          <img src={restaurantImageThree} alt="bar" />
         </div>
-
+        <Headline headline="EVENTS OF THE MONTH" />
+        <Headline headline="NIGHT CLUB GALLERY" />
+        <Headline headline="RECENT BLOG" />
         <Routes>
           <Route path="/" element={<div>root</div>} />
           <Route path="/about-us" element={<div>About Us</div>} />
