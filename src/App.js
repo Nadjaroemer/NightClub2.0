@@ -39,8 +39,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Landingpage />
-        <Footer />
+
         <Routes>
           <Route path="/" element={<div>root</div>} />
           <Route path="/about-us" element={<div>About Us</div>} />
@@ -50,6 +49,8 @@ function App() {
           <Route path="/booking" element={<div>Book a table</div>} />
           <Route path="/contact-us" element={<div>Contact Us</div>} />
         </Routes>
+        <Landingpage />
+        <Footer />
       </BrowserRouter>
     </div>
   );

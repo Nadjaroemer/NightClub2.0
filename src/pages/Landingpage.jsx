@@ -1,12 +1,10 @@
 import Headline from "../components/Headline";
-import Footer from "../components/Footer";
-
 
 import restaurantImageTo from "../assets/content-img/reastaurant_1.jpg";
 import restaurantImageOne from "../assets/content-img/thumb1.jpg";
 import restaurantImageThree from "../assets/content-img/thumb2.jpg";
 
-export default function Landingpage(){
+export default function Landingpage() {
   return(
     <div>
     <Headline headline="WELCOME IN THE NIGHTCLUB" />
@@ -23,7 +21,6 @@ export default function Landingpage(){
         <Headline headline="EVENTS OF THE MONTH" />
         <Headline headline="NIGHT CLUB GALLERY" />
         <Headline headline="RECENT BLOG" />
-        <Footer />
         </div>
   )
 }
