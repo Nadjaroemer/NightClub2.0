@@ -1,12 +1,11 @@
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Hero from "./components/Hero";
-import Headline from "./components/Headline";
 import "./App.css";
 import logo from "../src/assets/Logo.png";
 
-import restaurantImageTo from "../src/assets/content-img/reastaurant_1.jpg";
-import restaurantImageOne from "../src/assets/content-img/thumb1.jpg";
-import restaurantImageThree from "../src/assets/content-img/thumb2.jpg";
+import Footer from "./components/Footer";
+import Landingpage from "./pages/Landingpage";
+
 function App() {
   return (
     <div className="bg-black text-white font-['Ubuntu']">
@@ -40,19 +39,8 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Headline headline="WELCOME IN THE NIGHTCLUB" />
-        <div className="flex pt-24 justify-center">
-          <img
-            src={restaurantImageOne}
-            alt="drinks at table"
-            className="pr-16"
-          />
-          <img src={restaurantImageTo} alt="bruschetta" className="pr-16" />
-          <img src={restaurantImageThree} alt="bar" />
-        </div>
-        <Headline headline="EVENTS OF THE MONTH" />
-        <Headline headline="NIGHT CLUB GALLERY" />
-        <Headline headline="RECENT BLOG" />
+        <Landingpage />
+        <Footer />
         <Routes>
           <Route path="/" element={<div>root</div>} />
           <Route path="/about-us" element={<div>About Us</div>} />
