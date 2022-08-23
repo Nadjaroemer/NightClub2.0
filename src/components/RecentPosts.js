@@ -4,7 +4,7 @@ export default function RecentPosts({ image, text, date }) {
       <img src={image} alt="recent blogpost" />
       <div className="pl-8">
         <p className="pb-5">{text}</p>
-        <p>{date}</p>
+        <p className="text-[#ff2a70] "> {date}</p>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import headerImageOne from "../assets/bg/header_bg_1.jpg";
+import line from "../assets/bottom_line2.png";
+import logo from "../assets/icon/Logo.svg";
 //import headerImageTo from "../assets/bg/header_bg_2.jpg";
 
 export default function Hero() {
@@ -25,13 +27,13 @@ export default function Hero() {
 
       <div className="absolute z-30 right-0 left-0 top-1/2 flex flex-col items-center">
         <div>
-          <img src="./src/assets/icon/Logo_main.svg" alt="Main Logo" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="flex flex-col items-center">
-          <h2 className=" text-[color:white] place-self-center text-2xl">
+          <h2 className=" text-[color:white] place-self-center text-4xl uppercase tracking-widest">
             Have a good time
           </h2>
-          <img src="/src/assets/bottom_line2.png" alt="night club logo" />
+          <img src={line} alt="night club logo" />
         </div>
       </div>
     </section>
