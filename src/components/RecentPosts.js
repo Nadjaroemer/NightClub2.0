@@ -1,9 +1,9 @@
-export default function ResentPosts({ image, text, date }) {
+export default function RecentPosts({ image, text, date }) {
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <img src={image} alt="recent blogpost" />
-      <div>
-        <p>{text}</p>
+      <div className="pl-8">
+        <p className="pb-5">{text}</p>
         <p>{date}</p>
       </div>
     </div>
