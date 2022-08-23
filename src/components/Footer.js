@@ -13,7 +13,7 @@ import recentPostTwo from "../assets/content-img/recent_post2.jpg";
 
 export default function Footer() {
   return (
-    <section className="pl-56 pr-56">
+    <section className="pl-32 pr-32 pt-32">
       <div className="flex justify-between pb-28">
         <section>
           <Adress />
