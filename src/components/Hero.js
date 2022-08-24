@@ -48,11 +48,7 @@ export default function Hero() {
 
   return (
     <section className="relative">
-      <img
-        className="w-screen h-screen z-0"
-        src={headerImageOne}
-        alt="Night Club"
-      />
+      <img className="w-screen z-0" src={headerImageOne} alt="Night Club" />
       {/* left: 0; right: 0; margin-left: auto; margin-right: auto; */}
 
       <div className="absolute z-30 right-0 left-0 top-1/2 flex flex-col items-center">
