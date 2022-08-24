@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AnimatePresence } from "framer-motion";
 import Message from "./Message";
 import axios from "axios";
+import PrimaryButton from "./PrimaryButton";
 
 export default function EmailSubscriptionForm() {
   const [successMessage, setSuccessMessage] = useState();
@@ -60,9 +61,9 @@ export default function EmailSubscriptionForm() {
             setSuccessMessage(null);
           }}
         />
-        <button className="uppercase pl-10 border-b-2 p-2 m-3 text-center">
-          subscribe
-        </button>
+
+        <PrimaryButton text="Subscribe" />
+
         <AnimatePresence>
           {errors.email && errors.email.type === "required" && (
             <Message error>{errors.email.message}</Message>
