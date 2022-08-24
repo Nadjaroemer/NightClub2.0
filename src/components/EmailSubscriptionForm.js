@@ -15,12 +15,12 @@ export default function EmailSubscriptionForm() {
     clearErrors,
   } = useForm();
 
-  const mailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const mailValidation = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
   const onSubmit = async (form) => {
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/newsletters`,
+        `${process.env.NIGHTCLUB_APP_BASE_URL}/newsletters`,
 
         {
           email: form.email,
@@ -47,9 +47,9 @@ export default function EmailSubscriptionForm() {
         </p>
       </div>
 
-      <form className="max-w-3xl pt-12" onSubmit={handleSubmit(onSubmit)}>
+      <form className="max-w-3xl pt-12 flex" onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="w-[516px] h-10 p-6"
+          className="w-[516px] h-10 p-6 mr-6 border-b-4 bg-transparent"
           type="text"
           placeholder="Enter Your Email"
           {...register("email", {
