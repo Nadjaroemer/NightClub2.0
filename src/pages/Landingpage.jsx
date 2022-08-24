@@ -1,6 +1,7 @@
 import Headline from "../components/Headline";
 import Testimonials from "../components/Testimonials";
 import BlogPost from "../components/BlogPost";
+import EmailSubscriptionForm from "../components/EmailSubscriptionForm"
 
 import restaurantImageTo from "../assets/content-img/reastaurant_1.jpg";
 import restaurantImageOne from "../assets/content-img/thumb1.jpg";
@@ -33,6 +34,7 @@ export default function Landingpage() {
         name="Alex"
         text="There are many variations of passages of Lorem ipsum available, but the majority have suddered aæteration in som form, by injected humour, or randomised words which don*t look even slightly believable. If you are going to uyse a passage of Lorem Ipsum you ned to be sure there isn*t anything embarrising hidden in the middle of the text"/>
         
+        <EmailSubscriptionForm/>
 
         <Headline headline="RECENT BLOG" />
 
@@ -64,9 +66,9 @@ export default function Landingpage() {
         text="It is long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
         />
         </div>
-
+    </div>
         
-        </div>
+        
 
   )
 }
