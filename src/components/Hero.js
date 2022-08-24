@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import headerImageOne from "../assets/bg/header_bg_1.jpg";
 import line from "../assets/bottom_line2.png";
 import logo from "../assets/icon/Logo.svg";
 //import headerImageTo from "../assets/bg/header_bg_2.jpg";
 
 export default function Hero() {
-  {
-    const heroImages = ["header_bg_1.jpg", "header_bg_2.jpg"];
+  const heroImages = ["header_bg_1.jpg", "header_bg_2.jpg"];
 
-    function getRandomImage(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min) + min);
-    }
-    const heroImagePicker = () =>
-      `./assets/bg/${heroImages[getRandomImage(0, 2)]}`;
+  function getRandomImage(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
   }
+
+  const heroImagePicker = () => {
+    return `./assets/bg/${heroImages[getRandomImage(0, 2)]}`;
+  };
+
   const logoAnimation = {
     initial: {
       rotateX: 95,
@@ -48,8 +48,7 @@ export default function Hero() {
 
   return (
     <section className="relative">
-      <img className="w-screen z-0" src={headerImageOne} alt="" />
-      {/* left: 0; right: 0; margin-left: auto; margin-right: auto; */}
+      <img className="w-screen z-0" src={heroImagePicker()} alt="" />
 
       <div className="absolute z-30 right-0 left-0 top-1/2 flex flex-col items-center">
         <motion.img

@@ -10,7 +10,6 @@ import testimonialThree from "../assets/content-img/testimonial_3.jpg";
 import blogPostOne from "../assets/content-img/blog_full1.jpg";
 import blogPostTwo from "../assets/content-img/blog_full2.jpg";
 import blogPostThree from "../assets/content-img/blog_full3.jpg";
-import NightClubMainOffers from "../components/NightClubMainOffers";
 import MainOffers from "../components/MainOffers";
 
 

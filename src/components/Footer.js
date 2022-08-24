@@ -1,4 +1,3 @@
-import { IconBase } from "react-icons";
 import {
   FaTwitter,
   FaFacebookF,

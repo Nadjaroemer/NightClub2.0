@@ -1,27 +1,40 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+const selectedBlogPostId = 1;
+
+const arr = [1, 2, 3, 4, 5];
+const filteredArr = arr.filter((element) => {
+  if (element === 2 || element === 4) {
+    return true;
+  }
+  return false;
+});
+console.log("filteredArr: ", filteredArr);
+
 export default function Blog() {
-  const [blogPosts, setBlogPosts] = useState();
+  const [latestBlogPost, setLatestBlogPost] = useState();
 
   useEffect(() => {
     const fetchBlogPosts = () => {
       axios
-        .get(`${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts`)
+        .get(
+          `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts/${selectedBlogPostId}`
+        )
         .then((response) => {
-          setBlogPosts(response.data);
+          setLatestBlogPost(response.data);
         });
     };
+
+    const fetchComments = () => {};
+
     fetchBlogPosts();
-  }, [setBlogPosts]);
+    fetchComments();
+  }, [setLatestBlogPost]);
 
   return (
     <div>
-      {blogPosts
-        ? blogPosts.map((blogPost) => {
-            return <div>Blog post id: {blogPost.id}</div>;
-          })
-        : null}
+      {latestBlogPost ? <div>Blog post id: {latestBlogPost.id}</div> : null}
     </div>
   );
 }
