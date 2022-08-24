@@ -36,7 +36,7 @@ export default function EmailSubscriptionForm() {
   };
 
   return (
-    <section className="flex flex-col justifz-center items-center">
+    <section className="flex flex-col justifz-center items-center pt-44 pb-14">
       <div>
         <h2 className="uppercase text-4xl pb-3">
           Want the latest night club news

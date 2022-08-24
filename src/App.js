@@ -5,6 +5,7 @@ import logo from "../src/assets/Logo.png";
 
 import Footer from "./components/Footer";
 import Landingpage from "./pages/Landingpage";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -41,15 +42,14 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<div>root</div>} />
+          <Route path="/" element={<Landingpage />} />
           <Route path="/about-us" element={<div>About Us</div>} />
-          <Route path="/blog" element={<div>Blog</div>} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/events" element={<div>Events</div>} />
           <Route path="/gallery" element={<div>Gallery</div>} />
           <Route path="/booking" element={<div>Book a table</div>} />
           <Route path="/contact-us" element={<div>Contact Us</div>} />
         </Routes>
-        <Landingpage />
         <Footer />
       </BrowserRouter>
     </div>

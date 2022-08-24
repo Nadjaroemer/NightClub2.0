@@ -3,13 +3,16 @@ import Testimonials from "../components/Testimonials";
 import BlogPost from "../components/BlogPost";
 import EmailSubscriptionForm from "../components/EmailSubscriptionForm"
 
-import restaurantImageTo from "../assets/content-img/reastaurant_1.jpg";
+//import restaurantImageTwo from "../assets/content-img/restaurant_1.jpg"
 import restaurantImageOne from "../assets/content-img/thumb1.jpg";
 import restaurantImageThree from "../assets/content-img/thumb2.jpg";
 import testimonialThree from "../assets/content-img/testimonial_3.jpg";
 import blogPostOne from "../assets/content-img/blog_full1.jpg";
 import blogPostTwo from "../assets/content-img/blog_full2.jpg";
 import blogPostThree from "../assets/content-img/blog_full3.jpg";
+import NightClubMainOffers from "../components/NightClubMainOffers";
+import MainOffers from "../components/MainOffers";
+
 
 
 export default function Landingpage() {
@@ -22,9 +25,10 @@ export default function Landingpage() {
             alt="drinks at table"
             className="pr-16"
           />
-          <img src={restaurantImageTo} alt="bruschetta" className="pr-16" />
+          <img src={restaurantImageThree}alt="bruschetta" className="pr-16" />
           <img src={restaurantImageThree} alt="bar" />
         </div>
+        <MainOffers/>
 
         <Headline headline="EVENTS OF THE MONTH" />
         <Headline headline="NIGHT CLUB GALLERY" />
@@ -34,8 +38,6 @@ export default function Landingpage() {
         name="Alex"
         text="There are many variations of passages of Lorem ipsum available, but the majority have suddered aæteration in som form, by injected humour, or randomised words which don*t look even slightly believable. If you are going to uyse a passage of Lorem Ipsum you ned to be sure there isn*t anything embarrising hidden in the middle of the text"/>
         
-        <EmailSubscriptionForm/>
-
         <Headline headline="RECENT BLOG" />
 
         <div className="flex pl-24 pr-24">
@@ -66,6 +68,7 @@ export default function Landingpage() {
         text="It is long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
         />
         </div>
+        <EmailSubscriptionForm/>
     </div>
         
         
