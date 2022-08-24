@@ -48,8 +48,9 @@ export default function Hero() {
 
   return (
     <section className="relative">
-      <img className="w-screen z-0" src={heroImagePicker()} alt="" />
-
+      <div className="bg-black">
+        <img className="w-screen z-0" src={heroImagePicker()} alt="" />
+      </div>
       <div className="absolute z-30 right-0 left-0 top-1/2 flex flex-col items-center">
         <motion.img
           src={logo}
