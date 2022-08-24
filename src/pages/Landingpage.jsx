@@ -14,7 +14,8 @@ import MainOffers from "../components/MainOffers";
 
 
 
-export default function Landingpage() {
+export default function Landingpage(props) {
+  // props.blogPosts
   return(
     <div>
     <Headline headline="WELCOME IN THE NIGHTCLUB" />

@@ -1,13 +1,43 @@
+import { useEffect, useState } from "react";
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import axios from "axios";
+
 import Hero from "./components/Hero";
 import "./App.css";
 import logo from "../src/assets/Logo.png";
-
 import Footer from "./components/Footer";
 import Landingpage from "./pages/Landingpage";
 import Blog from "./pages/Blog";
 
+const SELECTED_BLOG_POST_ID = 3;
+
 function App() {
+  const [blogPosts, setBlogPosts] = useState();
+  const [comments, setComments] = useState();
+
+  useEffect(() => {
+    const fetchBlogPosts = () => {
+      axios
+        .get(`${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts`)
+        .then((response) => {
+          setBlogPosts(response.data);
+        });
+    };
+
+    const fetchComments = () => {
+      axios
+        .get(
+          `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts/${SELECTED_BLOG_POST_ID}/comments`
+        )
+        .then((response) => {
+          setComments(response.data);
+        });
+    };
+
+    fetchBlogPosts();
+    fetchComments();
+  }, []);
+
   return (
     <div className="bg-black text-white font-['Ubuntu']">
       <BrowserRouter>
@@ -42,9 +72,23 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<Landingpage />} />
+          <Route path="/" element={<Landingpage blogPosts={blogPosts} />} />
           <Route path="/about-us" element={<div>About Us</div>} />
-          <Route path="/blog" element={<Blog />} />
+          <Route
+            path="/blog"
+            element={
+              <Blog
+                comments={comments}
+                // Optional chaining
+                latestBlogPost={blogPosts?.find((blogPost) => {
+                  if (blogPost.id === 3) {
+                    return true;
+                  }
+                  return false;
+                })}
+              />
+            }
+          />
           <Route path="/events" element={<div>Events</div>} />
           <Route path="/gallery" element={<div>Gallery</div>} />
           <Route path="/booking" element={<div>Book a table</div>} />
