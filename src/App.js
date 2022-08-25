@@ -19,28 +19,44 @@ function App() {
   const [blogPosts, setBlogPosts] = useState();
   const [comments, setComments] = useState();
 
+  const fetchBlogPosts = () => {
+    axios
+      .get(`${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts`)
+      .then((response) => {
+        setBlogPosts(response.data);
+      });
+  };
+
+  const fetchComments = () => {
+    axios
+      .get(
+        `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts/${SELECTED_BLOG_POST_ID}/comments`
+      )
+      .then((response) => {
+        setComments(response.data);
+      });
+  };
+
   useEffect(() => {
-    const fetchBlogPosts = () => {
-      axios
-        .get(`${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts`)
-        .then((response) => {
-          setBlogPosts(response.data);
-        });
-    };
-
-    const fetchComments = () => {
-      axios
-        .get(
-          `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts/${SELECTED_BLOG_POST_ID}/comments`
-        )
-        .then((response) => {
-          setComments(response.data);
-        });
-    };
-
     fetchBlogPosts();
     fetchComments();
   }, []);
+
+  const submitComment = (name, email, comment) => {
+    axios
+      .post(
+        `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts/${SELECTED_BLOG_POST_ID}/comments`,
+        {
+          name,
+          email,
+          content: comment,
+          date: new Date().toDateString(),
+        }
+      )
+      .then(() => {
+        fetchComments();
+      });
+  };
 
   return (
     <div className="bg-black text-white font-['Ubuntu']">
@@ -136,9 +152,12 @@ function App() {
             element={
               <Blog
                 comments={comments}
+                submitComment={(name, email, comment) => {
+                  submitComment(name, email, comment);
+                }}
                 // Optional chaining
                 latestBlogPost={blogPosts?.find((blogPost) => {
-                  if (blogPost.id === 3) {
+                  if (blogPost.id === SELECTED_BLOG_POST_ID) {
                     return true;
                   }
                   return false;

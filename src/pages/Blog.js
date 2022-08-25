@@ -1,7 +1,5 @@
-import axios from "axios";
 import { useState } from "react";
 
-import blogPostImage from "../assets/content-img/blog_full3.jpg";
 import commentImage from "../assets/content-img/testimonial_1.jpg";
 import Headline from "../components/Headline";
 
@@ -9,51 +7,34 @@ export default function Blog(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
-
-  const submitForm = () => {
-    if (props.latestBlogPost) {
-      // Set loading state
-      axios
-        .post(
-          `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/blogposts/${props.latestBlogPost.id}/comments`,
-          {
-            name,
-            email,
-            content: comment,
-            date: new Date().toDateString(),
-          }
-        )
-        .then(() => {
-          // Reset fields
-          setName("");
-          setEmail("");
-          setComment("");
-        });
-    }
-  };
-
   return (
     <>
       <Headline headline="Blog Post" />
       <section className="flex flex-col pl-8 pr-8 md:pt-48 md:pl-48 md:pr-48">
-        <img src={blogPostImage} alt="Blogpost" className="pt-8 pb-8" />
         {props.latestBlogPost ? (
-          <div>
-            <h1
-              key={props.latestBlogPost.id}
-              className="uppercase text-xl md:text-2xl"
-            >
-              {props.latestBlogPost.title}
-            </h1>
-            <div className="flex flex-wrap text-[#ff2a70] text-xl">
-              <p className="uppercase">by: </p> {props.latestBlogPost.author}
-              <p>/{props.comments?.length} comments/</p>
-              <p>16 Nov 2018</p>
+          <>
+            <img
+              src={props.latestBlogPost.asset.url}
+              alt="Blogpost"
+              className="pt-8 pb-8"
+            />
+            <div>
+              <h1
+                key={props.latestBlogPost.id}
+                className="uppercase text-xl md:text-2xl"
+              >
+                {props.latestBlogPost.title}
+              </h1>
+              <div className="flex flex-wrap text-[#ff2a70] text-xl">
+                <p className="uppercase">by: </p> {props.latestBlogPost.author}
+                <p>/{props.comments?.length} comments/</p>
+                <p>16 Nov 2018</p>
+              </div>
+              <div className="pt-2 md:pt-5 text-sm md:text-lg">
+                {props.latestBlogPost.content}
+              </div>
             </div>
-            <div className="pt-2 md:pt-5 text-sm md:text-lg">
-              {props.latestBlogPost.content}
-            </div>
-          </div>
+          </>
         ) : null}
 
         <div>
@@ -94,7 +75,10 @@ export default function Blog(props) {
             className="grid grid-cols-2 grid-rows-3 gap-8"
             onSubmit={(e) => {
               e.preventDefault();
-              submitForm();
+              props.submitComment(name, email, comment);
+              setName("");
+              setEmail("");
+              setComment("");
             }}
           >
             <input
