@@ -1,19 +1,21 @@
-import Overlay from "./Overlay";
+import { GiPartyPopper } from "react-icons/gi";
+import { IoBeer, IoRestaurant } from "react-icons/io5";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { IoBeer, IoRestaurant } from "react-icons/io5";
+import Overlay from "./Overlay";
 
-export default function NightClubMainOffers() {
+const NightClubMainOffers = () => {
   const [hoverItemIndex, setHoverItemIndex] = useState(null);
-
   const mainOffers = [
     {
-      imgUrl: "./assets/content-img/restaurant_1.jpg",
-      icon: <IoBeer />,
+      imgUrl: "./assets/content-img/thumb1.jpg",
+      icon: <GiPartyPopper />,
       heading: "NIGHT CLUB",
     },
     {
-      imgUrl: "./assets/content-img/restaurant_2.jpg",
+      imgUrl: "./assets/content-img/restaurant_1.jpg",
       icon: <IoRestaurant />,
       heading: "RESTAURANT",
     },
@@ -24,7 +26,55 @@ export default function NightClubMainOffers() {
     },
   ];
 
-  // ANIMATIONS
+  // === STYLE ===
+  const mainOfferStyle = css`
+    width: 451px;
+    height: 577px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    & .icon {
+      width: 125px;
+      height: 135px;
+      border: 4px solid pink;
+      border-radius: 10px;
+      z-index: 1;
+      display: grid;
+      place-content: center;
+      margin: 0 auto;
+      & > svg {
+        color: pink;
+        width: 60px;
+        height: 60px;
+      }
+    }
+    & .mainOfferHeading {
+      text-align: center;
+      font-size: 24px;
+      color: grey;
+      margin: 2rem 0 1.5rem;
+      z-index: 1;
+    }
+    & .description {
+      max-width: 370px;
+      color: grey;
+      font-size: 16px;
+      line-height: 25px;
+      text-align: center;
+      z-index: 1;
+    }
+  `;
+  const mainOfferContainerStyle = css`
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+  `;
+
+  // === ANIMATIONS ===
   const iconAnimation = {
     initial: {
       opacity: 0.5,
@@ -69,15 +119,13 @@ export default function NightClubMainOffers() {
       x: 30,
     },
   };
-
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-9">
-        <p>Hello world</p>
+      <div css={mainOfferContainerStyle}>
         {mainOffers.map((offer, i) => (
           <motion.section
-            className="w-{451px} h-{577px} relative grid place-content-center"
             key={i}
+            css={mainOfferStyle}
             style={{
               backgroundImage: `url(${offer.imgUrl})`,
             }}
@@ -108,7 +156,7 @@ export default function NightClubMainOffers() {
                     {offer.heading}
                   </motion.h2>
                   <motion.p
-                    className="max-w-{370px} text-gray-300 z-10 text-center"
+                    className="description"
                     variants={descriptionAnimation}
                     initial="initial"
                     animate="animate"
@@ -127,4 +175,6 @@ export default function NightClubMainOffers() {
       </div>
     </>
   );
-}
+};
+
+export default NightClubMainOffers;

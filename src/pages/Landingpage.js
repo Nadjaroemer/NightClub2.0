@@ -12,6 +12,7 @@ import blogPostTwo from "../assets/content-img/blog_full2.jpg";
 import blogPostThree from "../assets/content-img/blog_full3.jpg";
 import MainOffers from "../components/MainOffers";
 import EventsOfTheMonth from "../components/EventsOfTheMonth";
+import NightClubMainOffers from "../components/NightClubMainOffers";
 
 export default function Landingpage(props) {
   // props.blogPosts
@@ -28,7 +29,7 @@ export default function Landingpage(props) {
           <img src={restaurantImageThree} alt="bar" />
         </div> */}
       <MainOffers />
-
+      <NightClubMainOffers />
       <Headline headline="EVENTS OF THE MONTH" />
       <EventsOfTheMonth />
 
