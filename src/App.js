@@ -8,8 +8,8 @@ import "./App.css";
 import logo from "../src/assets/Logo.png";
 import Footer from "./components/Footer";
 import Landingpage from "./pages/Landingpage";
-import Blog from "./pages/Blog";
 import MobileMenu from "./components/Mobilemenu";
+import Blog from "./pages/Blog";
 
 const SELECTED_BLOG_POST_ID = 3;
 

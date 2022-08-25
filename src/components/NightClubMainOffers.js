@@ -72,7 +72,7 @@ export default function NightClubMainOffers() {
 
   return (
     <>
-      <div className="flex justify-center gap-9">
+      <div className="flex flex-wrap justify-center gap-9">
         <p>Hello world</p>
         {mainOffers.map((offer, i) => (
           <motion.section
