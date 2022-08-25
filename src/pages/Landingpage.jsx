@@ -11,6 +11,7 @@ import blogPostOne from "../assets/content-img/blog_full1.jpg";
 import blogPostTwo from "../assets/content-img/blog_full2.jpg";
 import blogPostThree from "../assets/content-img/blog_full3.jpg";
 import MainOffers from "../components/MainOffers";
+import EventsOfTheMonth from "../components/EventsOfTheMonth";
 
 
 
@@ -31,6 +32,8 @@ export default function Landingpage(props) {
         <MainOffers/>
 
         <Headline headline="EVENTS OF THE MONTH" />
+        <EventsOfTheMonth/>
+
         <Headline headline="NIGHT CLUB GALLERY" />
 
         <Testimonials
