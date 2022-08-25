@@ -18,7 +18,7 @@ export default function Blog(props) {
             </h1>
             <div className="flex flex-wrap text-[#ff2a70] text-xl">
               <p className="uppercase">by: </p> {props.latestBlogPost.author}
-              <p> /3 comments/</p>
+              <p>/{props.comments?.length} comments/</p>
               <p>16 Nov 2018</p>
             </div>
             <div className="pt-2 md:pt-5 text-sm md:text-lg">
@@ -29,7 +29,7 @@ export default function Blog(props) {
 
         <div>
           <h2 className="uppercase text-xl md:text-4xl pt-8 md:pt-16">
-            3 Comments
+            {props.comments?.length} Comments
           </h2>
           {props.comments
             ? props.comments.map((comment) => {
