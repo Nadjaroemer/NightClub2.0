@@ -34,7 +34,7 @@ export default function Blog(props) {
           {props.comments
             ? props.comments.map((comment) => {
                 return (
-                  <div key={comment.name} className="flex pt-5 md:pt-10 ">
+                  <div key={comment.id} className="flex pt-5 md:pt-10 ">
                     <img src={commentImage} alt="comment" />
                     <div className="pl-8">
                       <div className="flex">
@@ -61,7 +61,12 @@ export default function Blog(props) {
           leave a comment
         </h2>
         <section className="md:pt-14">
-          <form className="grid grid-cols-2 grid-rows-3 gap-8 ">
+          <form
+            className="grid grid-cols-2 grid-rows-3 gap-8"
+            onSubmit={(e) => {
+              console.log(e);
+            }}
+          >
             <input
               className="border-2 p-2 bg-transparent md:h-20"
               type="text"
