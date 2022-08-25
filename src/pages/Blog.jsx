@@ -10,7 +10,7 @@ export default function Blog(props) {
           ? props.comments.map((comment) => {
               return (
                 <div>
-                  <div>here is an image</div>
+                  <div key={comment}>here is an image</div>
                   {comment.content}
                 </div>
               );
