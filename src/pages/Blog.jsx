@@ -2,7 +2,7 @@ export default function Blog(props) {
   return (
     <section>
       <div>
-        {props.latestBlogPost ? <div>Blog post id: {props.latestBlogPost.id}</div> : null}
+        {props.latestBlogPost ? <div key={props.latestBlogPost.id}>Blog post id: {props.latestBlogPost.id}</div> : null}
       </div>
 
       <div>

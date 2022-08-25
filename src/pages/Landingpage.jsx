@@ -16,7 +16,7 @@ import MainOffers from "../components/MainOffers";
 
 export default function Landingpage(props) {
   // props.blogPosts
-  return(
+  return (
     <div>
     <Headline headline="WELCOME IN THE NIGHTCLUB" />
         <div className="flex pt-24 justify-center">
