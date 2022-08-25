@@ -42,11 +42,11 @@ export default function Blog(props) {
       <h2 className="uppercase text-xl md:text-4xl pt-8 md:pt-24">leave a comment</h2>
       <section className="md:pt-14" >
       <form className="grid grid-cols-2 grid-rows-3 gap-8 ">
-        <input className="border-2 p-2 bg-transparent md:h-20" placeholder="Your Name"></input>
+        <input className="border-2 p-2 bg-transparent md:h-20" type="text" placeholder="Your Name"></input>
         <input  className="border-2 p-2 bg-transparent md:h-20" placeholder="Your Email"></input>
         <textarea className="border-2 p-2 bg-transparent col-span-2" placeholder="Comment"></textarea>
-        <PrimaryButton className="col-start-2 col-end-3"
-      text="Submit"/>
+        <button className="col-start-2 col-end-3 place-self-end"><PrimaryButton 
+      text="Submit"/></button>
       </form> 
      
       </section>
