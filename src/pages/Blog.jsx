@@ -1,8 +1,10 @@
 //import Comment from "../components/Comment";
 import blogPostImage from "../assets/content-img/blog_full3.jpg";
 import commentImage from "../assets/content-img/testimonial_1.jpg";
+import PrimaryButton from "../components/PrimaryButton";
 
 export default function Blog(props) {
+  
   return (
     <section className="flex flex-col pl-8 pr-8 md:pt-48 md:pl-48 md:pr-48">
       <img src={blogPostImage} alt="Blogpost"className="pt-8 pb-8"/>
@@ -33,6 +35,17 @@ export default function Blog(props) {
             })
           : null}
       </div>
+      <h2 className="uppercase text-xl md:text-4xl pt-8 md:pt-24">leave a comment</h2>
+      <section className="md:pt-14" >
+      <form className="grid grid-cols-2 grid-rows-3 gap-8 ">
+        <input className="border-2 p-2 bg-transparent md:h-20" placeholder="Your Name"></input>
+        <input  className="border-2 p-2 bg-transparent md:h-20" placeholder="Your Email"></input>
+        <textarea className="border-2 p-2 bg-transparent col-span-2" placeholder="Comment"></textarea>
+        <PrimaryButton className="col-start-2 col-end-3"
+      text="Submit"/>
+      </form> 
+     
+      </section>
     </section>
   );
 }
