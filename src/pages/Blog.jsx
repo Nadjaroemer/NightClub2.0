@@ -2,11 +2,15 @@
 import blogPostImage from "../assets/content-img/blog_full3.jpg";
 import commentImage from "../assets/content-img/testimonial_1.jpg";
 import PrimaryButton from "../components/PrimaryButton";
+import Headline from "../components/Headline";
 
 export default function Blog(props) {
   
   return (
-    <section className="flex flex-col pl-8 pr-8 md:pt-48 md:pl-48 md:pr-48">
+    <>   
+       <Headline
+       headline="Blog Post"/>
+      <section className="flex flex-col pl-8 pr-8 md:pt-48 md:pl-48 md:pr-48">
       <img src={blogPostImage} alt="Blogpost"className="pt-8 pb-8"/>
       <div>
         {props.latestBlogPost ? <h1 key={props.latestBlogPost.id} className="uppercase text-xl md:text-2xl">{props.latestBlogPost.title}</h1> : null}
@@ -47,5 +51,7 @@ export default function Blog(props) {
      
       </section>
     </section>
+    </>
+
   );
 }
