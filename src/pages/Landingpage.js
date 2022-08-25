@@ -2,15 +2,10 @@ import Headline from "../components/Headline";
 import Testimonials from "../components/Testimonials";
 import BlogPost from "../components/BlogPost";
 import EmailSubscriptionForm from "../components/EmailSubscriptionForm";
-
-//import restaurantImageTwo from "../assets/content-img/restaurant_1.jpg"
-// import restaurantImageOne from "../assets/content-img/thumb1.jpg";
-// import restaurantImageThree from "../assets/content-img/thumb2.jpg";
 import testimonialThree from "../assets/content-img/testimonial_3.jpg";
 import blogPostOne from "../assets/content-img/blog_full1.jpg";
 import blogPostTwo from "../assets/content-img/blog_full2.jpg";
 import blogPostThree from "../assets/content-img/blog_full3.jpg";
-import MainOffers from "../components/MainOffers";
 import EventsOfTheMonth from "../components/EventsOfTheMonth";
 import NightClubMainOffers from "../components/NightClubMainOffers";
 
@@ -28,7 +23,7 @@ export default function Landingpage(props) {
           <img src={restaurantImageThree}alt="bruschetta" className="pr-16" />
           <img src={restaurantImageThree} alt="bar" />
         </div> */}
-      <MainOffers />
+
       <NightClubMainOffers />
       <Headline headline="EVENTS OF THE MONTH" />
       <EventsOfTheMonth />
