@@ -1,11 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
 
 export default function EventsOfTheMonth() {
   const [events, setEvents] = useState();
