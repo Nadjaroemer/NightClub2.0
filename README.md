@@ -1,8 +1,11 @@
 # Projektdokumentation
 
 **Navn:** Nadja Rømer Hesselbjerg
+
 **Hold:** Finder jeg ud af
+
 **Uddannelse:** Webudvikler
+
 **Uddannelsessted:** Roskilde Teknisk Skole
 
 # Stack
