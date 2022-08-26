@@ -58,9 +58,8 @@ function App() {
         fetchComments();
       });
   };
-  const { pathname } = useLocation();
+  //const { pathname } = useLocation();
 
-  console.log({ location });
   return (
     <div className="bg-black max-w-full pl-8 pr-8 text-white font-['Ubuntu']">
       <Hero />

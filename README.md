@@ -5,14 +5,14 @@
 **Uddannelse:** Webudvikler
 **Uddannelsessted:** Roskilde Teknisk Skole
 
-#Stack
+# Stack
 
 - HTML
 - CSS
 - Javascript
 - React
 
-#Teknisk Dokumentation
+# Teknisk Dokumentation
 
 Tailwind Css
 
