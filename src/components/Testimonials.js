@@ -51,13 +51,14 @@ const Testimonials = () => {
     width: 100%;
     display: grid;
     justify-content: center;
+    padding-top: 60px;
     color: white;
     text-align: center;
     & > img {
       margin: 0 auto;
     }
     & > h2 {
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 400;
       margin: 1.5rem 0;
     }
