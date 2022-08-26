@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Landingpage from "./pages/Landingpage";
 import MobileMenu from "./components/Mobilemenu";
 import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 const SELECTED_BLOG_POST_ID = 3;
 
@@ -210,7 +211,7 @@ function App() {
         <Route path="/events" element={<div>Events</div>} />
         <Route path="/gallery" element={<div>Gallery</div>} />
         <Route path="/booking" element={<div>Book a table</div>} />
-        <Route path="/contact-us" element={<div>Contact Us</div>} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
