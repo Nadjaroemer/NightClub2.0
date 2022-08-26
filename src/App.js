@@ -61,7 +61,7 @@ function App() {
 
   console.log({ location });
   return (
-    <div className="bg-black text-white font-['Ubuntu']">
+    <div className="bg-black  text-white font-['Ubuntu']">
       <Hero />
 
       {isMobileMenuOpen ? (

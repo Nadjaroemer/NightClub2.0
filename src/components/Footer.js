@@ -12,7 +12,7 @@ import recentPostTwo from "../assets/content-img/recent_post2.jpg";
 
 export default function Footer() {
   return (
-    <section className="pl-6 pr-2 md:pl-32 md:pr-32 md:pt-32">
+    <section className="md:pl-32 md:pr-32 md:pt-32">
       <div className="flex flex-wrap md:flex-nowrap justify-between md:pb-28">
         <section>
           <Adress />
@@ -54,22 +54,24 @@ export default function Footer() {
       </div>
 
       <section className="flex  flex-wrap md:flex-nowrap justify-between items-center sm:flex-wrap text-base md:pb-24">
-        <p className="capitalize">Stay Connected with us night Club</p>
+        <p className="capitalize pb-6 md:pt-0 pt-48">
+          Stay Connected with us night Club
+        </p>
 
         <div className="flex">
-          <div className="border-2 border-white w-7 md:w-12 h-7 md:h-12 flex justify-center items-center ">
+          <div className="border-2 border-white w-10 md:w-12 h-10 md:h-12 flex justify-center items-center ">
             <FaFacebookF size="1.5rem" />
           </div>
-          <div className="flex border-2 border-white w-12 h-12 justify-center items-center ml-8">
+          <div className="flex border-2 border-white w-10 h-10 md:w-12 md:h-12 justify-center items-center ml-8">
             <FaTwitter size="1.5rem" />
           </div>
-          <div className="flex border-2 border-white w-12 h-12 justify-center items-center ml-8">
+          <div className="flex border-2 border-white w-10 h-10 md:w-12 md:h-12 justify-center items-center ml-8">
             <FaGooglePlusG size="1.5rem" />
           </div>
-          <div className="flex border-2 border-white w-12 h-12 justify-center items-center ml-8">
+          <div className="flex border-2 border-white w-10 h-10 md:w-12 md:h-12 justify-center items-center ml-8">
             <FaSkype size="1.5rem" />
           </div>
-          <div className="flex border-2 border-white w-12 h-12 justify-center items-center ml-8">
+          <div className="flex border-2 border-white w-10 h-10 md:w-12 md:h-12 justify-center items-center ml-8">
             <FaBloggerB size="1.5rem" />
           </div>
         </div>
