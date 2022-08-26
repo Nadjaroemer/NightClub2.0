@@ -8,27 +8,18 @@ import blogPostTwo from "../assets/content-img/blog_full2.jpg";
 import blogPostThree from "../assets/content-img/blog_full3.jpg";
 import EventsOfTheMonth from "../components/EventsOfTheMonth";
 import NightClubMainOffers from "../components/NightClubMainOffers";
+import Gallery from "../components/Gallery";
 
 export default function Landingpage(props) {
   // props.blogPosts
   return (
     <div>
       <Headline headline="WELCOME IN THE NIGHTCLUB" />
-      {/* <div className="flex pt-24 justify-center">
-          <img
-            src={restaurantImageOne}
-            alt="drinks at table"
-            className="pr-16"
-          />
-          <img src={restaurantImageThree}alt="bruschetta" className="pr-16" />
-          <img src={restaurantImageThree} alt="bar" />
-        </div> */}
-
       <NightClubMainOffers />
       <Headline headline="EVENTS OF THE MONTH" />
       <EventsOfTheMonth />
-
       <Headline headline="NIGHT CLUB GALLERY" />
+      <Gallery />
 
       <Testimonials
         image={testimonialThree}

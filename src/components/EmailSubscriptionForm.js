@@ -20,7 +20,7 @@ export default function EmailSubscriptionForm() {
   const onSubmit = async (form) => {
     try {
       const res = await axios.post(
-        `${process.env.NIGHTCLUB_APP_BASE_URL}/newsletters`,
+        `${process.env.REACT_APP_NIGHTCLUB_APP_BASE_URL}/newsletters`,
 
         {
           email: form.email,
@@ -36,7 +36,7 @@ export default function EmailSubscriptionForm() {
   };
 
   return (
-    <section className="flex flex-col justifz-center items-center pt-44 pb-14">
+    <section className="flex flex-col justify-center items-center pt-44 pb-14">
       <div>
         <h2 className="uppercase text-4xl pb-3">
           Want the latest night club news

@@ -6,7 +6,7 @@ export default function Headline({ headline }) {
       <h1 className="pt-28 tracking-[0.075em] font-bold uppercase text-center text-4xl">
         {headline}
       </h1>
-      <img src={line} alt="line" className="pt-8 place-self-center" />
+      <img src={line} alt="line" className="pt-8 md:pb-16 place-self-center" />
     </div>
   );
 }

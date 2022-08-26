@@ -12,14 +12,14 @@ import recentPostTwo from "../assets/content-img/recent_post2.jpg";
 
 export default function Footer() {
   return (
-    <section className="pl-32 pr-32 pt-32">
-      <div className="flex justify-between pb-28">
+    <section className="pl-6 pr-2 md:pl-32 md:pr-32 md:pt-32">
+      <div className="flex flex-wrap md:flex-nowrap justify-between md:pb-28">
         <section>
           <Adress />
         </section>
         <section>
-          <h2 className="uppercase text-[#ff2a70] pb-10">Recent Posts</h2>
-          <div className="pb-20">
+          <h2 className="uppercase text-[#ff2a70] md:pb-10">Recent Posts</h2>
+          <div className="pb-4 mb:pb-20">
             <RecentPosts
               image={recentPostOne}
               text="Lorem Ipsum is simply dummy text of the printing and typesetting"
@@ -35,8 +35,8 @@ export default function Footer() {
           </div>
         </section>
         <section>
-          <h2 className="uppercase text-[#ff2a70] pb-10">Recent Posts</h2>
-          <div className="pb-20">
+          <h2 className="uppercase text-[#ff2a70] md:pb-10">Recent Posts</h2>
+          <div className="pb-4 mb:pb-20">
             <RecentPosts
               image={recentPostTwo}
               text="Lorem Ipsum is simply dummy text of the printing and typesetting"
@@ -53,11 +53,11 @@ export default function Footer() {
         </section>
       </div>
 
-      <section className="flex justify-between items-center sm:flex-wrap text-base pb-24">
+      <section className="flex  flex-wrap md:flex-nowrap justify-between items-center sm:flex-wrap text-base md:pb-24">
         <p className="capitalize">Stay Connected with us night Club</p>
 
         <div className="flex">
-          <div className="border-2 border-white w-12 h-12 flex justify-center items-center ">
+          <div className="border-2 border-white w-7 md:w-12 h-7 md:h-12 flex justify-center items-center ">
             <FaFacebookF size="1.5rem" />
           </div>
           <div className="flex border-2 border-white w-12 h-12 justify-center items-center ml-8">

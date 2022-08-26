@@ -15,7 +15,7 @@ const NightClubMainOffers = () => {
       heading: "NIGHT CLUB",
     },
     {
-      imgUrl: "./assets/content-img/restaurant_1.jpg",
+      imgUrl: "./assets/content-img/reastaurant_1.jpg",
       icon: <IoRestaurant />,
       heading: "RESTAURANT",
     },
@@ -40,14 +40,14 @@ const NightClubMainOffers = () => {
     & .icon {
       width: 125px;
       height: 135px;
-      border: 4px solid pink;
+      border: 4px solid #ff2a70;
       border-radius: 10px;
       z-index: 1;
       display: grid;
       place-content: center;
       margin: 0 auto;
       & > svg {
-        color: pink;
+        color: #ff2a70;
         width: 60px;
         height: 60px;
       }
@@ -55,13 +55,13 @@ const NightClubMainOffers = () => {
     & .mainOfferHeading {
       text-align: center;
       font-size: 24px;
-      color: grey;
+      color: white;
       margin: 2rem 0 1.5rem;
       z-index: 1;
     }
     & .description {
       max-width: 370px;
-      color: grey;
+      color: white;
       font-size: 16px;
       line-height: 25px;
       text-align: center;
