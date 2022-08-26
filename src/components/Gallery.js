@@ -73,7 +73,7 @@ const Gallery = () => {
   const closeIconStyle = css`
     width: 50px;
     height: 50px;
-    color: grey;
+    color: white;
     position: fixed;
     top: 20px;
     right: 30px;
@@ -95,7 +95,7 @@ const Gallery = () => {
     }
     & .swiper-button-next,
     & .swiper-button-prev {
-      border: 2px solid grey;
+      border: 2px solid white;
       width: 30px;
       height: 30px;
       margin: 0 9%;
@@ -104,7 +104,7 @@ const Gallery = () => {
     & .swiper-button-next::after,
     & .swiper-button-prev::after {
       font-size: 0.8rem;
-      color: grey;
+      color: white;
     }
   `;
   // === ANIMATIONS ===

@@ -71,6 +71,7 @@ const NightClubMainOffers = () => {
   const mainOfferContainerStyle = css`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 37px;
   `;
 

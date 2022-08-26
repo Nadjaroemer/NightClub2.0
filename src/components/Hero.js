@@ -49,7 +49,11 @@ export default function Hero() {
   return (
     <section className="relative">
       <div className="bg-black">
-        <img className="w-screen z-0" src={heroImagePicker()} alt="" />
+        <img
+          className="w-screen z-0 h-fit bg-cover bg-black"
+          src={heroImagePicker()}
+          alt=""
+        />
       </div>
       <div className="absolute z-30 right-0 left-0 top-1/2 flex flex-col items-center">
         <motion.img
@@ -66,7 +70,7 @@ export default function Hero() {
           initial="initial"
           animate="animate"
         >
-          <h2 className=" text-[color:white] place-self-center text-4xl uppercase tracking-widest">
+          <h2 className=" text-[color:white] place-self-center text-2xl md:text-4xl uppercase tracking-widest">
             Have a good time
           </h2>
           <img src={line} alt="night club logo" />

@@ -13,7 +13,7 @@ import Gallery from "../components/Gallery";
 export default function Landingpage(props) {
   // props.blogPosts
   return (
-    <div>
+    <div className="bg-black">
       <Headline headline="WELCOME IN THE NIGHTCLUB" />
       <NightClubMainOffers />
       <Headline headline="EVENTS OF THE MONTH" />
@@ -28,7 +28,7 @@ export default function Landingpage(props) {
 
       <Headline headline="RECENT BLOG" />
 
-      <div className="flex pl-24 pr-24">
+      <div className="flex flex-wrap md:flex-nowrap md:pl-24 md:pr-24">
         <BlogPost
           image={blogPostOne}
           headline="More than 20 Yea..."

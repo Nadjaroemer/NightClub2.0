@@ -58,12 +58,12 @@ function App() {
         fetchComments();
       });
   };
+  const { pathname } = useLocation();
 
   console.log({ location });
   return (
-    <div className="bg-black  text-white font-['Ubuntu']">
+    <div className="bg-black max-w-full pl-8 pr-8 text-white font-['Ubuntu']">
       <Hero />
-
       {isMobileMenuOpen ? (
         <div className="fixed w-screen h-screen bg-black z-50">
           <MobileMenu setIsMobileMenuOpen={setIsMobileMenuOpen} />
