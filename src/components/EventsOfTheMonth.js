@@ -80,7 +80,7 @@ const EventsOfTheMonth = () => {
     bottom: 0;
     z-index: 1;
     color: white;
-    background: rgba(3, 2, 3, 0.7);
+    background: black;
     padding: 1rem 2.5rem 1rem 1rem;
     margin-bottom: 1px;
     line-height: 22px;

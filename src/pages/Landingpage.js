@@ -20,7 +20,6 @@ export default function Landingpage(props) {
       <EventsOfTheMonth />
       <Headline headline="NIGHT CLUB GALLERY" />
       <Gallery />
-
       <Testimonials
         image={testimonialThree}
         name="Alex"
