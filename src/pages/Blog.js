@@ -67,12 +67,12 @@ export default function Blog(props) {
               })
             : null}
         </div>
-        <h2 className="uppercase text-xl md:text-4xl pt-8 md:pt-24">
+        <h2 className="uppercase text-xl md:text-4xl pt-8 md:pt-24 md:pb-12">
           leave a comment
         </h2>
-        <section className="md:pt-14">
+        <section>
           <form
-            className="grid grid-cols-2 grid-rows-3 gap-8"
+            className="grid grid-cols-2 grid-rows-[repeat(3, minmax(auto, 1fr))] gap-8"
             onSubmit={(e) => {
               e.preventDefault();
               props.submitComment(name, email, comment);
@@ -82,7 +82,7 @@ export default function Blog(props) {
             }}
           >
             <input
-              className="border-2 p-2 bg-transparent md:h-20"
+              className="border-2 p-2 bg-transparent self-end md:h-20"
               type="text"
               placeholder="Your Name"
               value={name}
@@ -91,7 +91,7 @@ export default function Blog(props) {
               }}
             />
             <input
-              className="border-2 p-2 bg-transparent md:h-20"
+              className="border-2 p-2 bg-transparent self-end md:h-20"
               placeholder="Your Email"
               value={email}
               onChange={(e) => {
@@ -99,6 +99,7 @@ export default function Blog(props) {
               }}
             />
             <textarea
+              rows="10"
               className="border-2 p-2 bg-transparent col-span-2"
               placeholder="Comment"
               value={comment}
