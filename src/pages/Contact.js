@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import Headline from "../components/Headline";
+import Message from "../components/Message";
 
 export default function Contact() {
   const [successMessage, setSuccessMessage] = useState();
@@ -35,7 +36,7 @@ export default function Contact() {
       <Headline headline="contact us" />
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8">
         <input
-          className="border-2 p-2 bg-transparent  md:h-20"
+          className="border-2 p-2 bg-transparent md:h-20"
           type="text"
           placeholder="Your Name"
           errorMessage={errors.name?.message}
@@ -74,9 +75,11 @@ export default function Contact() {
         />
         <AnimatePresence>
           {errors.nightClubApi && (
-            <div error>{errors.nightClubApi.message}</div>
+            <Message error>{errors.nightClubApi.message}</Message>
           )}
-          {successMessage && <div>{successMessage}</div>}
+          {successMessage && (
+            <div className="text-[#ff2a70] ">{successMessage}</div>
+          )}
         </AnimatePresence>
         <button
           className="col-start-2 col-end-3 place-self-end p{t/b}-{10px} pl-8 pr-8 bg-transparent border-white uppercase border-y-4"
