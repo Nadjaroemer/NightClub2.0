@@ -62,7 +62,7 @@ function App() {
   //const { pathname } = useLocation();
 
   return (
-    <div className="bg-black max-w-full pl-8 pr-8 text-white font-['Ubuntu']">
+    <div className="bg-black max-w-full text-white font-['Ubuntu']">
       <Hero />
       {isMobileMenuOpen ? (
         <div className="fixed w-screen h-screen bg-black z-50">

@@ -13,7 +13,7 @@ import Gallery from "../components/Gallery";
 export default function Landingpage(props) {
   // props.blogPosts
   return (
-    <div className="bg-black">
+    <div className="bg-black pl-8 pr-8">
       <Headline headline="WELCOME IN THE NIGHTCLUB" />
       <NightClubMainOffers />
       <Headline headline="EVENTS OF THE MONTH" />
@@ -23,7 +23,7 @@ export default function Landingpage(props) {
       <Testimonials
         image={testimonialThree}
         name="Alex"
-        text="There are many variations of passages of Lorem ipsum available, but the majority have suddered aæteration in som form, by injected humour, or randomised words which don*t look even slightly believable. If you are going to uyse a passage of Lorem Ipsum you ned to be sure there isn*t anything embarrising hidden in the middle of the text"
+        text="There are many variations of passages of Lorem ipsum available, but the majority have suddered ateration in som form, by injected humour, or randomised words which don*t look even slightly believable. If you are going to uyse a passage of Lorem Ipsum you ned to be sure there isn*t anything embarrising hidden in the middle of the text"
       />
 
       <Headline headline="RECENT BLOG" />
